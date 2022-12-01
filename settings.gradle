@@ -1,0 +1,4 @@
+rootProject.name = "springboot-rsocket-keepalive-overflow"
+
+include "springboot-rsocket-service"
+include "keepalive-overflow-client"

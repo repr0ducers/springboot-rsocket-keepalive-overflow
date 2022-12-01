@@ -1,0 +1,24 @@
+plugins {
+    id "application"
+}
+
+dependencies {
+    /*used for TaggingMetadataCodec.createRoutingMetadata*/
+    implementation "io.rsocket:rsocket-core:1.1.2"
+
+    implementation "io.netty:netty-buffer:4.1.80.Final"
+    implementation "io.netty:netty-codec:4.1.80.Final"
+    implementation "io.netty:netty-handler:4.1.80.Final"
+    implementation "io.netty:netty-transport:4.1.80.Final"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.13.3"
+
+    compileOnly "org.slf4j:slf4j-api:1.7.36"
+    runtimeOnly "ch.qos.logback:logback-classic:1.2.11"
+}
+
+mainClassName = "example.client.Main"
+
+task runMain(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = mainClassName
+}
