@@ -2,8 +2,8 @@
 
 ### DESCRIPTION
 
-Most recent release of RSocket/RSocket-java [1.1.3](https://github.com/rsocket/rsocket-java/releases/tag/1.1.3) integration 
-from spring-boot (most recent - [3.0.0](https://docs.spring.io/spring-framework/docs/current/reference/html/rsocket.html) & 2.7.6) 
+Most recent release of RSocket/RSocket-java [1.1.4](https://github.com/rsocket/rsocket-java/releases/tag/1.1.4) integration 
+from spring-boot (most recent - [3.2.3](https://docs.spring.io/spring-framework/docs/current/reference/html/rsocket.html) & 2.7.18) 
 is affected by denial-of-service with keepalive-with-payload memory overflow.
 
 Malicious RSocket client may stop reads from socket at arbitrary moment of connection, 
@@ -22,7 +22,7 @@ jdk 8+
 
 ### SETUP
 
-Spring-boot 2.7.6 based application with `RSocket/RSocket-java` service, started with 1GB memory limit: -Xms1024m, -Xmx1024m 
+Spring-boot 2.7.18 based application with `RSocket/RSocket-java` service, started with 1GB memory limit: -Xms1024m, -Xmx1024m 
 (`springboot-rsocket-service` module).
 
 Malicious RSocket client (small subset of protocol, sufficient for vulnerability demonstration) is implemented 

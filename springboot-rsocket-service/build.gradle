@@ -8,6 +8,8 @@ sourceCompatibility = 1.8
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-rsocket"
+    implementation "io.rsocket:rsocket-core:1.1.4"
+    implementation "io.rsocket:rsocket-transport-netty:1.1.4"
 }
 
 mainClassName = "example.service.Main"
